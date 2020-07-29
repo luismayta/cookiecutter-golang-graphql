@@ -1,4 +1,4 @@
-FROM sphinxdoc/docker-ci
+FROM sphinxdoc/docker-ci:latest
 
 ARG stage
 
@@ -39,7 +39,6 @@ RUN apt-get update -y \
   && su ${USERNAME} \
   && mkdir -p /usr/src \
   && chown -R ${USERNAME} /usr/src \
-
 
 # pipenv
   && pip3 install pipenv \
